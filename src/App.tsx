@@ -1,17 +1,17 @@
-import { createContext, useContext, useState } from "react";
+import { useState } from "react";
 import "./App.css";
-import { Box, Text, Textarea, VStack } from "@chakra-ui/react";
+import { Box, Text, VStack } from "@chakra-ui/react";
 import BalanceBar from "./components/BalanceBar";
 import { amount } from "./context";
+import TransactionBar from "./components/TransactionBar";
 function App() {
   const [balance, setBalance] = useState({
-    balance: 40,
     income: 0,
     expense: 0,
   });
   return (
     <>
-      <amount.Provider value={balance}>
+      <amount.Provider value={{ balance, setBalance }}>
         <Box
           display={"flex"}
           justifyContent={"center"}
@@ -21,6 +21,8 @@ function App() {
           <VStack>
             <Text fontSize="4xl">Expense tracker</Text>
             <BalanceBar />
+
+            <TransactionBar />
           </VStack>
         </Box>
       </amount.Provider>
