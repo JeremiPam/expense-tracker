@@ -6,7 +6,7 @@ import { amount } from "../context";
 const BalanceBar = () => {
   const { balance, setBalance } = useContext(amount);
   return (
-    <Box width="100%" textAlign={"center"}>
+    <Box width="100%" textAlign={"center"} padding={"10px"}>
       <Text fontSize="3xl">
         your balance:${balance.income + balance.expense}
       </Text>

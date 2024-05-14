@@ -13,7 +13,7 @@ const TransactionBar = () => {
     <>
       <HistoryBar transactions={transactions}></HistoryBar>
       <Divider />
-      <Text>Add new transaction</Text>
+      <Text fontSize="2xl">Add new transaction</Text>
       <Text>Description</Text>
       <Input
         bgColor={"dimgray"}

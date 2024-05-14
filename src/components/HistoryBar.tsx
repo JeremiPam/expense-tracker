@@ -7,7 +7,7 @@ export interface transaction {
 const HistoryBar = ({ transactions }: { transactions: transaction[] }) => {
   return (
     <>
-      <Text>History</Text>
+      <Text fontSize="2xl">History</Text>
       {transactions.map((transaction) => (
         <Box
           width="100%"
