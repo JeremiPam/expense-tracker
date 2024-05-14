@@ -14,14 +14,15 @@ const TransactionBar = () => {
       <HistoryBar transactions={transactions}></HistoryBar>
       <Divider />
       <Text fontSize="2xl">Add new transaction</Text>
-      <Text>Description</Text>
+      <Text fontSize={"xl"}>Description</Text>
       <Input
         bgColor={"dimgray"}
         onChange={(event) => {
           setDescriptionInput(event.target.value);
         }}
       ></Input>
-      <Text>Amount</Text>
+      <Text fontSize={"xl"}>Amount</Text>
+      <Text>(positive number-income,negative number-expense)</Text>
       <Input
         bgColor={"dimgray"}
         type="number"
